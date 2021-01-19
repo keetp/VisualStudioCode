@@ -8,7 +8,7 @@ class Student:
         self.programofstudy = programofstudy 
 
     def __str__(self):
-        return f"{self.firstname} {self.lastname} \nStudent Number: {self.id} \nProgram: {self.programofstudy} "
+        return f"{self.firstname} {self.lastname} \nStudent Number: {self.id} \nProgram: {self.programofstudy}"
 
 
 keet = Student("Keith", "Rogers", 201030756, "Computational Mathematics")

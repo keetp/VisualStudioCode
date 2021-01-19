@@ -7,6 +7,10 @@ class Student:
         self.id = id
         self.programofstudy = programofstudy 
 
+    def complain(self):
+        print("oh man not another assignment")
+
+
     def __str__(self):
         return f"{self.firstname} {self.lastname} \nStudent Number: {self.id} \nProgram: {self.programofstudy}"
 
@@ -14,3 +18,4 @@ class Student:
 keet = Student("Keith", "Rogers", 201030756, "Computational Mathematics")
 
 print(keet)
+keet.complain()

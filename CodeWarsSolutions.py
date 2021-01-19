@@ -18,3 +18,10 @@ import math     # math library
 def litres(time):
     return math.floor(time*0.5)
 
+# squares each digit individually and concatonates them
+
+def square_digits(num):
+    new_str = ""
+    for dig in str(num):
+        new_str += str(int(dig)**2)
+    return int(new_str)

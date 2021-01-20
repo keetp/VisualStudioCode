@@ -31,9 +31,12 @@ class Course:
             self.students.append(student)
             return True
         return False
+    
+    def __str__(self):
+        return f"{self.course_name}, {self.max_students}"
 
 keet = Student("Keith", "Rogers", 201030756, "Computational Mathematics")
 course = Course("OOP", 2)
 course.add_student(keet)
 
-print(course.students[0].firstname, course.students[0].lastname)
+print(course.students)

@@ -1,7 +1,7 @@
 /* trying to teach myself JavaScript by using the codewars site in combination with freecodecamp
 
 
-freecodecamp stuff follows. basic syntax exercises completed before attempting the following.
+freecodecamp stuff follows. basic syntax exercises completed before attempting the following. codewars stuff found in CodeWars.js
 */
 
 // recursion practice

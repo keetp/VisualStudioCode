@@ -1,7 +1,7 @@
 /* trying to teach myself JavaScript by using the codewars site in combination with freecodecamp
 
 
-Code Wars stuff follows
+Code Wars stuff follows. freecodecamp stuff found in freecodecamp.js
 */
 
 // reverses a given string

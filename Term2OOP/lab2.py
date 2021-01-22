@@ -1,12 +1,63 @@
 """ Lab 2: Object Oriented Programming. Creating a Point and a Rectangle class."""
 
 
+# QUESTION 1
+class Dog:
+    """ A basic representation of a dog.
+
+    attributes: self, name, breed, age
+    """
+
+    # initializing dog object
+    def __init__(self, name, breed, age):
+        self.name = name
+        self.breed = breed
+        self.age = age
+
+    def bark(self):
+        print("ruff ruff")
+
+    # formatting output to be human legible
+    def __str__(self):
+        return f"{self.name}, {self.breed}, {self.age}"
+
+    # 3 get methods which return dog object's name, breed and age respectively
+    def getName(self):
+        return self.name
+
+    def getBreed(self):
+        return self.breed
+
+    def getAge(self):
+        return self.age
+
+
+# helper function to check for deep equality in dog objects
+def sameDog(dog1, dog2):
+    dog1 = [dog1.getName(), dog1.getBreed(), dog1.getAge()]
+    dog2 = [dog2.getName(), dog2.getBreed(), dog2.getAge()]
+    return dog1 == dog2
+
+
+# instantiating 2 dogs (james and franko)
+james = Dog('James', 'Pitt Bull', 7)
+
+franko = Dog('Franko', 'Pitt Bull', 7)
+
+# checking shallow equality
+print(james is franko)
+# using sameDog function to check deep equality
+print(sameDog(james, franko))
+
+
+#######################################################################################################################
+# QUESTION 2
 class Point:
     """representation of a point in 2D cartesian plane
 
     attributes: x and y co-ordinates
     """
-    
+
     # initializing the object with the x and y coord values
     def __init__(self, x, y):
         self.x = x
@@ -60,9 +111,9 @@ class Rectangle:
         self.width = h
 
 
-# calling object methods and printing for testing purposes
+# calling object methods and printing for testing purposes. remove comment symbols to print yourself.
 r = Rectangle(Point(0, 0), 10, 5)
 p = r.perimeter()
 a = r.area()
 r.transpose()
-print(r.__doc__)
+# print(r.__doc__)

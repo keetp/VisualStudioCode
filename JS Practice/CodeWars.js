@@ -14,7 +14,5 @@ function solution(str){
      return new_str
 }
 
-/* all following code is from the freecodecamp tutorial site
 
-*/
 

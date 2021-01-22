@@ -1,0 +1,5 @@
+/* trying to teach myself JavaScript by using the codewars site in combination with freecodecamp
+
+
+freecodecamp stuff follows
+*/

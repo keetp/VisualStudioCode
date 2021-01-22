@@ -1,8 +1,12 @@
 """ Lab 2: Object Oriented Programming. Creating a Point and a Rectangle class."""
 
 
-# point class with attributes x-coord and y-coord
-class Point:    
+class Point:
+    """representation of a point in 2D cartesian plane
+
+    attributes: x and y co-ordinates
+    """
+    
     # initializing the object with the x and y coord values
     def __init__(self, x, y):
         self.x = x
@@ -15,15 +19,21 @@ class Point:
 
 # rectangle class with attributes Point(x,y), height and width
 
-class Rectangle:    
+class Rectangle:
+    """Building a rectangle
+
+    attributes: corner co-ordinate in 2D space, height, width
+    """
+
     # initializing the rectangle object with attributes corner coord (x and y value), height and width
     def __init__(self, corner_coord, height, width):
         self.corner_coord = corner_coord
         self.height = height
-        self.width = width  
+        self.width = width
 
-    # returns the width
-    def getWidth(self): 
+        # returns the width
+
+    def getWidth(self):
         return self.width
 
     # returns the height
@@ -55,4 +65,4 @@ r = Rectangle(Point(0, 0), 10, 5)
 p = r.perimeter()
 a = r.area()
 r.transpose()
-print(r)
+print(r.__doc__)

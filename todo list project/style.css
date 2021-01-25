@@ -5,14 +5,14 @@
 }
 
 body{
-    background-image: linear-gradient(120deg, #f7c72b, #f34616);
-    color: white;
+    background-image: linear-gradient(120deg, #cc8de9, #7000a3);
+    color: rgb(253, 253, 253);
     font-family: "Poppins", sans-serif;
     min-height: 100vh;
 }
 
 header{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
 header,
@@ -31,12 +31,12 @@ form input, form button{
 }
 
 form button{
-    color: #f34616;
+    color: #7c1696;
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 form button:hover{
-    background: #f34616;
+    background: #452d4d;
     color: white;
 }

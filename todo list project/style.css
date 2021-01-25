@@ -40,3 +40,10 @@ form button:hover{
     background: #452d4d;
     color: white;
 }
+
+img {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}

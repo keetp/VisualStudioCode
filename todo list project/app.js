@@ -2,7 +2,7 @@
 let todoItems = [];
 
 // function to render the list items to the webpage for the user
-function renderTodo(todo) {
+function displayTodo(todo) {
     // selecting first element in the list
     const list = document.querySelector('.todo-list');
     // need to figure out how to implement this, in over my head
@@ -22,7 +22,7 @@ function addTodo(text){
 
     todoItems.push(todo);
     console.log(todoItems)
-    //    renderTodo(todo);
+    //    displayTodo(todo);
 }
 
 

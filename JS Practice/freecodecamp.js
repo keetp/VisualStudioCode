@@ -12,8 +12,9 @@ function multiply(arr, n) {
     var product = 1;
     for(var i = 0; i <= n; i++){
         product *= arr[i];
-    }
-}   return product;
+        } 
+    return product;
+}  
 
 // implemented with recursion. note that 
 // multiply(arr, n) == multiply(arr, n - 1) * arr[n - 1]
@@ -25,7 +26,7 @@ function multiply(arr, n) {
     } else {
         return (multiply(arr, n-1) * arr[n-1])
     }
-}   
+}
 
 // similar function which uses recursion to calculate sum
 
@@ -37,3 +38,27 @@ function sum(arr, n) {
         return (sum(arr, n-1) + arr[n-1])
     }
 }
+
+/* JavaScript Objects */
+
+// example of object syntax in JS
+
+
+var cat = {
+    "name": "Whiskers",
+    "legs": 4,
+    "tails": 1,
+    "enemies": ["Water", "Dogs"]
+};
+
+var myDog = {
+    "name" : "Mugs",
+    "legs" : 4,
+    "tails" : 1,
+    "friends" : ["me", "Chris", "Janet"]
+};
+
+// accessing object properties with dot notation
+
+var dogName = myDog.name;
+var catName = myCat.name;

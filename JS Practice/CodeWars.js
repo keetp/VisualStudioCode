@@ -13,6 +13,3 @@ function solution(str){
      }
      return new_str
 }
-
-
-

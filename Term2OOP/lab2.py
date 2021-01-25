@@ -41,14 +41,17 @@ def sameDog(dog1, dog2):
 
 # instantiating 2 dogs (james and franko)
 james = Dog('James', 'Pitt Bull', 7)
-
+franko2 = Dog('Franko', 'Pitt Bull', 7)
 franko = Dog('Franko', 'Pitt Bull', 7)
 
 # checking shallow equality
 print(james is franko)
 # using sameDog function to check deep equality
-print(sameDog(james, franko))
 
+# example where deep equality is true
+print(sameDog(franko2, franko))
+# example where deep equality is false
+print(sameDog(franko, james))
 
 #######################################################################################################################
 # QUESTION 2

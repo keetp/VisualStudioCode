@@ -7,17 +7,18 @@
 .wrapper{
     text-align:center;
     width: auto;
-    margin: 130px auto;
+    margin: 250px auto;
 }
 
 #seconds, #msec{
     font-size: 2rem;
-    margin-top: 140px;
+    
 }
 
 h1, h2{
     text-align:center;
     font-size: 2.5rem;
+    margin-top: 50px;
 
 }
 

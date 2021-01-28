@@ -47,7 +47,6 @@ franko = Dog('Franko', 'Pitt Bull', 7)
 # checking shallow equality
 print(james is franko)
 # using sameDog function to check deep equality
-
 # example where deep equality is true
 print(sameDog(franko2, franko))
 # example where deep equality is false

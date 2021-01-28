@@ -34,8 +34,8 @@ class Dog:
 
 # helper function to check for deep equality in dog objects
 def sameDog(dog1, dog2):
-    dog1 = [dog1.getName(), dog1.getBreed(), dog1.getAge()]
-    dog2 = [dog2.getName(), dog2.getBreed(), dog2.getAge()]
+    dog1 = [values for values in vars(dog1).values()]
+    dog2 = [values for values in vars(dog2).values()]
     return dog1 == dog2
 
 

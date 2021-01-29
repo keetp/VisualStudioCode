@@ -32,7 +32,12 @@ while attempts <= len(display):
     # getting user's guess and accounting for them putting in upper case
     guess = input('Guess a letter: ')
     guess.lower()
-    
+
+    # not letting the user to pick two letters
+    if len(guess) > 1:
+        print('Two letters at a time is not allowed. No cheating!')
+        continue
+
     # if the character is not found, prints the amount of attempts left
     if guess not in answer:
         print(str(len(display) - attempts) + ' attempt(s) left.' )
@@ -45,11 +50,16 @@ while attempts <= len(display):
             display[i] = guess
             attempts += 1
 
+    # win condition/message
+    if display == answer:
+        print('You win! Congratulations!')
+        break
+
     # prints the display
     print(' '.join(display))
 
     # if attempts run out, prints game over and exits
     if attempts > len(display):
         print('Game over! You lose!')
-        exit
+        break
     

@@ -23,7 +23,7 @@ class Employee(Person):
         self.salary = salary
 
     def __str__(self):
-        return super().__str__() + f' Employee #: {self.employee_number}, Position: {self.position},' \
+        return super().__str__() + f', Employee #: {self.employee_number}, Position: {self.position},' \
                                    f' Salary: ${self.salary} annually'
 
     # increases salary by an inputted amount
@@ -47,7 +47,7 @@ class Student(Person):
         courses = ''
         for i in range(len(self.current_courses)):
             courses += self.current_courses[i] + '; '
-        return super().__str__() + f' Student #: {self.student_number}, Enrolled Courses: ' + courses
+        return super().__str__() + f', Student #: {self.student_number}, Enrolled Courses: ' + courses
 
     # drops a course
     def drop_course(self, str):
@@ -63,7 +63,7 @@ class Student(Person):
 p = Employee('Keith', 'Rogers', 25, 201030756, 'CEO', 25000)
 p1 = Student('Keith', 'Rogers', 25, 201030756, ['Math', 'Biology'])
 
-print(p1)
+print(p)
 
 p1.drop_course('Math')
 

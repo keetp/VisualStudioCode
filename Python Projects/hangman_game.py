@@ -5,7 +5,6 @@
 import random
 
 # creating a bank of potential words to choose from
-
 words = ['socks', 'mug', 'zucchini', 'phone', 'dentist']
 
 # shuffling around the list so a new word is presented each time the program is ran

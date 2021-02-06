@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lab 2: Links and Forms</title>
+</head>
+<body>
+    <h1>Lab 2: Links and Forms</h1>
+    <p>Created by: Keet</p>
+
+    <h1>Python Links</h1>
+    <p>(These links all open a new window)</p>
+
+    <ul>
+        <li><a href="https://realpython.com">RealPython</a></li>
+        <li><a href="https://docs.python.org/3/">Python 3.9.1 documentation</a></li>
+        <li><a href="https://xkcd.com/353/">xkcd Python comic</a></li>
+    </ul>
+
+    <div>
+        <h1>Contest Form</h1>
+        <h3>Enter to win:</h3>
+        <form action='/contest'>
+            <input id="fname" type="text" placeholder="First name" required>
+            <input id="lname" type="text" placeholder="Last name" required>
+            <input id="email" type="text"placeholder="Email" required>
+        <p>How did you find out about us?</p>
+            <label>Friend<input id="friend" type="radio" value="friend" name="find-out-get" checked></label>
+            <label>Online<input id="online" type="radio" value="online" name="find-out-get"></label>
+            <label>Other<input id="other" type="radio" value="other" name="find-out-get"></label>
+        <p>Answer this skill testing question correctly for a chance to win: 14992 + 526562 = ??</p>
+            <input id="answer" type="text" placeholder="Enter Answer" required>
+            <button type="submit">Enter Contest</button>
+        </form>
+    </div>
+</body>
+</html>

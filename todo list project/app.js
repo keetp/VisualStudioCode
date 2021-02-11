@@ -2,10 +2,28 @@
 let todoItems = [];
 
 // function to render the list items to the webpage for the user
-function displayTodo(todo) {
+function renderTodo(todo) {
     // selecting first element in the list
     const list = document.querySelector('.todo-list');
-    // need to figure out how to implement this, in over my head
+    // checking if todo object has checked value of true, assigns done if so.
+    const isChecked = todo.checked ? 'done':'';
+    // creating a list element to display
+    const node = document.createElement('li');
+    node.setAttribute('class', `todo-item ${isChecked}`);
+    node.setAttribute('class',  todo.id);
+
+    node.innerHTML = ` 
+    <input id="${todo.id}" type="checkbox"/>
+    <label for="${todo.id}" class="tick js-tick"></label>
+    <span>${todo.text}</span>
+    <button class="delete-todo js-delete-todo">
+    <svg><use href="#delete-icon"></use></svg>
+    </button>
+    
+    `;
+
+
+    list.append(node);
 }
 
 
@@ -21,7 +39,7 @@ function addTodo(text){
     };
 
     todoItems.push(todo);
-    console.log(todoItems)
+    renderTodo(todo);
     //    displayTodo(todo);
 }
 

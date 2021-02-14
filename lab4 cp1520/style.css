@@ -1,0 +1,36 @@
+.red{
+    color: red;
+}
+
+.yellow{
+    color:yellow;
+}
+
+.lego-list{
+    font-size:18px;
+    background-color: rgb(31, 30, 30);
+}
+
+#mario-img{
+    width:10%;
+}
+#lego-img{
+    width:40%;
+    border-width: 8px;
+    border-style: solid;
+}
+#header-text{
+    color:white;
+    border-color: black;
+    border-style: solid;
+    border-width: 6px;
+    font-family: 'Space Mono', monospace;
+}
+
+body{
+    background-color: rgb(36, 7, 163);
+}
+
+
+
+

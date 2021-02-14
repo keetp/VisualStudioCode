@@ -40,7 +40,6 @@ function addTodo(text){
 
     todoItems.push(todo);
     renderTodo(todo);
-    //    displayTodo(todo);
 }
 
 

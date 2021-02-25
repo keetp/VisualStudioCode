@@ -63,9 +63,9 @@ label_mod.setStyleSheet('border: 1px solid black;')
 
 # connecting button to the modulo calculation function
 calc_button.clicked.connect(mod_calc)
-# also connecting the enter key to the function while the user has the input boxes 
-# selected
-user_int.returnPressed.connect(mod_calc)  
+
+# also connecting the enter key to the function while the user has the input boxes selected
+user_int.returnPressed.connect(mod_calc) 
 user_mod.returnPressed.connect(mod_calc)
 
 

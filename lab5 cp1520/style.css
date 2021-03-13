@@ -1,0 +1,58 @@
+/*
+padding: check
+margin: check
+relative units: check
+hex and rgb colors: check
+variables: check
+*/
+
+:root{
+    --button-color: rgb(116, 101, 96);
+    --background-gradient: linear-gradient(130deg, #7e5656, #4c1653);
+}
+
+.wrapper{
+    text-align:center;
+    margin: 200px auto;
+    font-size: 30px;
+    font-style: bold;
+    border: solid 4px black;
+    border-radius: 5px;
+    width: 800px;
+    height: 220px;
+    padding: 60px;
+    background-image: var(--background-gradient);
+}
+
+#seconds, #msec{
+    font-size: 2rem;
+}
+
+h1, h2{
+    text-align:center;
+    font-size: 2.5rem;
+    margin-top: 50px;
+}
+
+button{
+    margin-top: 20px;
+    font-size: 22px;
+    font-style: bold;
+    width: 250px;
+    height: 50px;
+    background-color: var(--button-color);
+    border: solid 1px;
+    outline: none;
+}
+
+button:hover{
+    background-color:#691111;
+    color: black;
+}
+
+body{
+    background-image: var(--background-gradient);
+    color: rgb(22, 4, 4);
+    min-height: 100vh;
+    font-family: 'Lucida', sans-serif;
+}

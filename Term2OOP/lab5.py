@@ -13,7 +13,7 @@ class FormWidget(QDialog):
 
         # main layout
         layout = QFormLayout()
-        title = QLabel("<h1 style=color:green;>Princess Super Form</h1>")
+        title = QLabel("<h1 style=color:#c0c0c0;>User Information Form</h1>")
         layout.addWidget(title)
 
         # Combo box for primary computing device
@@ -88,8 +88,10 @@ class FormWidget(QDialog):
         """Creating box for more detailed user information"""
         self.text_group = QGroupBox()
         text_layout = QVBoxLayout()
+
         # label
         text_label = QLabel('How do you use your device on a typical day?')
+
         # one big text box
         textbox = QTextEdit()
         text_layout.addWidget(text_label)

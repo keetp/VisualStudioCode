@@ -1,3 +1,9 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+/venv
+.idea/
+1890_oop_python/
+.vscode/
+venv/
+*.zip

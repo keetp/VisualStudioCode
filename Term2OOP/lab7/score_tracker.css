@@ -1,0 +1,27 @@
+
+QWidget#title_screen{
+    background-color: #556fc5;
+}
+
+QWidget#score_screen{
+    background-color: #556fc5;
+}
+
+QLabel{
+    font-size: 22px;
+}
+
+QPushButton{
+    border: 2px solid #000000;
+    border-radius: 3px;
+    background-color: #3a3a81;
+    font-size: 16px;
+    height: 100%;
+}
+
+QLineEdit{
+    background: #556fc5;
+    border: 0px;
+    font-size: 15px;
+    text-align: center;
+}

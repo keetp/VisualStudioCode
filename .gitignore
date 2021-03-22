@@ -1,5 +1,3 @@
-.idea/
-1890_oop_python/
-.vscode/
-venv/
-*.zip
+# Default ignored files
+/shelf/
+/workspace.xml

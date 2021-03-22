@@ -1,7 +1,7 @@
 from functools import partial
 import os
 import sys
-
+import lab7_resources
 
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import (QPixmap, QFont, QIcon)
@@ -15,7 +15,7 @@ class ScoreTracker(QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setWindowTitle('ScoreKeeper 4.2')
-        self.setFixedSize(300, 100)
+        self.setFixedSize(400, 400)
         
         # creating stacked widgets
         self.stack = QStackedWidget(self)
@@ -27,47 +27,78 @@ class ScoreTracker(QMainWindow):
         with open(styles, 'r') as f:
             # external stylesheet
             self.setStyleSheet(f.read())
+        
+        # title screen picture
+        self.header = QLabel()
+        self.title_image = QPixmap(':/images/score_board.jpg')
+        self.title_image.scaledToWidth(15)
+        self.header.setPixmap(self.title_image)
 
+        # score screen picture
+        self.score_header = QLabel()
+        self.screen_image = QPixmap(':/images/score_board2.jpg')
+        self.screen_image.scaledToWidth(0)
+        self.score_header.setPixmap(self.screen_image)
+
+        # score display box
+        score = '0'
+        self.score_display = QLineEdit(score)
+        self.score_display.setReadOnly(True)
+        self.score_display.setAlignment(Qt.AlignCenter)
+        self.score_display.setFixedWidth(75)
+        
         # title screen widgets, layout and labels
         self.title_screen = QWidget()
         self.title_screen.setObjectName("title_screen")
         self.title_screen_layout = QVBoxLayout()
         self.title_screen.setLayout(self.title_screen_layout)
-        self.title_label = QLabel()
-        self.title_screen_layout.addWidget(self.title_label)
+        self.title_screen_layout.addWidget(self.header)
         self.title_button = QPushButton('Create Score Board')
         self.title_screen_layout.addWidget(self.title_button)
+        
+        # creating buttons
+        self.create_button_layout()
 
         # score screen widgets, layout and labels
         self.score_screen = QWidget()
         self.score_screen.setObjectName("score_screen")
-        self.score_screen_layout = QGridLayout()
+        self.score_screen_layout = QVBoxLayout()
         self.score_screen.setLayout(self.score_screen_layout)
+        self.score_screen_layout.addWidget(self.score_header)
         self.score_label = QLabel()
-        self.score_screen_layout.addWidget(self.score_label, 0, 1)
-
-        # score display box
-        score = 0
-        self.score_display = QLineEdit(str(score))
-        self.score_display.setReadOnly(True)
-        self.score_display.setAlignment(Qt.AlignCenter)
-        self.score_display.setFixedWidth(75)
-        self.score_screen_layout.addWidget(self.score_display, 1, 1)
-        
-        # increase and decrease buttons
-        self.increase_button = QPushButton('+')
-        self.decrease_button = QPushButton('-')
-        self.score_screen_layout.addWidget(self.increase_button, 1, 2)
-        self.score_screen_layout.addWidget(self.decrease_button, 1, 0)
+        self.score_screen_layout.addWidget(self.score_label)
+        self.score_screen_layout.addWidget(self.button_group)
 
         # button connections
         self.title_button.clicked.connect(self.score_screen_onClick)
-        self.increase_button.clicked.connect(self.increase_score_onClick)
-        self.decrease_button.clicked.connect(self.decrease_score_onClick)
-
+        
         # adding widgets to the stack
         self.stack.addWidget(self.title_screen)
         self.stack.addWidget(self.score_screen)
+
+    def create_button_layout(self):
+        self.button_group = QGroupBox()
+        button_layout = QHBoxLayout()
+        
+        # increase and decrease buttons
+        increase_button = QPushButton('+')
+        decrease_button = QPushButton('-')
+
+        # making button text bigger
+        increase_button.setStyleSheet('font-size: 26px;')
+        decrease_button.setStyleSheet('font-size: 26px;')
+
+        # adding to layout
+        button_layout.addWidget(decrease_button)
+        button_layout.addWidget(self.score_display)
+        button_layout.addWidget(increase_button)
+
+        # connections
+        increase_button.clicked.connect(self.increase_score_onClick)
+        decrease_button.clicked.connect(self.decrease_score_onClick)
+
+        # setting layout
+        self.button_group.setLayout(button_layout)
 
     # function to switch to the score page
     def score_screen_onClick(self):

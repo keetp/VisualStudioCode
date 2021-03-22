@@ -5,11 +5,8 @@ import lab7_resources
 
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import (QPixmap, QFont, QIcon)
-from PyQt5.QtWidgets import (QApplication, QCheckBox, QComboBox, QDateTimeEdit,
-        QDial, QDialog, QGridLayout, QGroupBox, QHBoxLayout, QLabel, QLineEdit, QMainWindow,
-        QProgressBar, QPushButton, QRadioButton, QScrollBar, QSizePolicy,
-        QSlider, QSpinBox, QStackedWidget, QStyleFactory, QTableWidget, QTabWidget, QTextEdit,
-        QVBoxLayout, QWidget, QToolBar)
+from PyQt5.QtWidgets import (QApplication, QDialog, QGridLayout, QGroupBox, QHBoxLayout, QLabel, QLineEdit, QMainWindow,
+        QProgressBar, QPushButton, QStackedWidget, QStyleFactory, QVBoxLayout, QWidget)
 
 class ScoreTracker(QMainWindow):
     def __init__(self, parent=None):

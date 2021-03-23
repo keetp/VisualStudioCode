@@ -12,7 +12,7 @@ class ScoreTracker(QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setWindowTitle('ScoreKeeper 4.2')
-        self.setFixedSize(400, 400)
+        self.setFixedSize(400, 450)
         
         # creating stacked widgets
         self.stack = QStackedWidget(self)
@@ -55,6 +55,8 @@ class ScoreTracker(QMainWindow):
         
         # creating buttons
         self.create_button_layout()
+        back_button = QPushButton('Back')
+        back_button.setObjectName('back_button')
 
         # score screen widgets, layout and labels
         self.score_screen = QWidget()
@@ -65,9 +67,12 @@ class ScoreTracker(QMainWindow):
         self.score_label = QLabel()
         self.score_screen_layout.addWidget(self.score_label)
         self.score_screen_layout.addWidget(self.button_group)
+        self.score_screen_layout.addWidget(back_button)
+        
 
         # button connections
         self.title_button.clicked.connect(self.score_screen_onClick)
+        back_button.clicked.connect(self.title_screen_onClick)
         
         # adding widgets to the stack
         self.stack.addWidget(self.title_screen)
@@ -82,8 +87,11 @@ class ScoreTracker(QMainWindow):
         decrease_button = QPushButton('-')
 
         # making button text bigger
-        increase_button.setStyleSheet('font-size: 26px;')
-        decrease_button.setStyleSheet('font-size: 26px;')
+        increase_button.setStyleSheet('font-size: 26px; border: 2px solid black;')
+        decrease_button.setStyleSheet('font-size: 26px; border: 2px solid black;')
+
+        # removing border from group
+        self.button_group.setStyleSheet('border: 0px;')
 
         # adding to layout
         button_layout.addWidget(decrease_button)
@@ -100,6 +108,9 @@ class ScoreTracker(QMainWindow):
     # function to switch to the score page
     def score_screen_onClick(self):
         self.stack.setCurrentIndex(1)
+    
+    def title_screen_onClick(self):
+        self.stack.setCurrentIndex(0)
 
     # increasing displayed number
     def increase_score_onClick(self):

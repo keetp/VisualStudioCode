@@ -1,7 +1,8 @@
 from functools import partial
+import lab7_resources
 import os
 import sys
-import lab7_resources
+
 
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import (QPixmap, QFont, QIcon)
@@ -69,7 +70,6 @@ class ScoreTracker(QMainWindow):
         self.score_screen_layout.addWidget(self.button_group)
         self.score_screen_layout.addWidget(back_button)
         
-
         # button connections
         self.title_button.clicked.connect(self.score_screen_onClick)
         back_button.clicked.connect(self.title_screen_onClick)

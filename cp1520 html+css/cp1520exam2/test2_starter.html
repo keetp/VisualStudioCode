@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Test 2 - KEITH ROGERS</title>
+</head>
+<body>
+    <img id="header-img" src="venv.png" alt="python_pic">
+    <h1>Creating Virtual Environments</h1>
+
+    <p>The module used to create and manage virtual environments is called <a href="https://docs.python.org/3/library/venv.html#module-venv" target="_blank">venv</a>. <a href="https://docs.python.org/3/library/venv.html#module-venv" target="_blank">venv</a>
+        will usually install the most recent version of Python that you have available. 
+        If you have multiple versions of Python on your system, you can select a specific Python version by running <code>python3</code> or whichever version you want.
+        To create a virtual environment, decide upon a directory where you want to place it, and run the <a href="https://docs.python.org/3/library/venv.html#module-venv" target="_blank">venv</a> 
+        module as a script with the directory path:</p>
+        <pre>python3 -m venv tutorial-env</pre>
+
+    <p>This will create the <code>tutorial-env</code> directory if it doesn’t exist, and also create directories inside it containing a copy of the Python interpreter, the standard library, and various supporting files.
+        A common directory location for a virtual environment is <code>.venv.</code> This name keeps the directory typically hidden in your shell and thus out of the way while giving it a name that explains why the directory exists.
+         It also prevents clashing with <code>.env</code> environment variable definition files that some tooling supports.
+        Once you’ve created a virtual environment, you may activate it.
+        On Windows, run:</p>
+    <pre>tutorial-env\Scripts\activate.bat</pre>
+    <p>On Unix or MacOS, run:</p>
+    <pre>source tutorial-env/bin/activate</pre>
+    <p>(This script is written for the bash shell. If you use the <strong>csh</strong> or <strong>fish</strong> shells, there are alternate <code>activate.csh</code> and <code>activate.fish</code> scripts you should use instead.)
+        Activating the virtual environment will change your shell’s prompt to show what virtual environment you’re using, and modify the environment so that running <code>python</code> will get you that 
+        particular version and installation of Python. For example:</p>
+<pre>$ source ~/envs/tutorial-env/bin/activate
+(tutorial-env) $ python
+Python 3.5.1 (default, May  6 2016, 10:59:36)
+  ...
+>>> import sys
+>>> sys.path
+['', '/usr/local/lib/python35.zip', ...,
+'~/envs/tutorial-env/lib/python3.5/site-packages']
+>>></pre>
+    
+</body>
+</html>

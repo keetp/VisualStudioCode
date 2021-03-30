@@ -14,6 +14,7 @@ class Player:
         self.create_playerboard()
           
     def create_playerboard(self):
+        """ creating playerboard"""
         self.button_group = QGroupBox()
         self.button_layout = QHBoxLayout()
 
@@ -72,6 +73,10 @@ class ScoreTracker(QMainWindow):
         self.stack = QStackedWidget(self)
         self.setCentralWidget(self.stack)
 
+        # creating title
+        self.create_titleScreen()
+        self.create_scoreScreen()
+
         # shamelessly lifted from your code
         current_dir = os.path.dirname(os.path.abspath(__file__))
         styles = os.path.join(current_dir, 'score_tracker.css')
@@ -79,31 +84,23 @@ class ScoreTracker(QMainWindow):
             # external stylesheet
             self.setStyleSheet(f.read())
         
-        # title screen picture
-        self.header = QLabel()
-        self.title_image = QPixmap(':/images/score_board.jpg')
-        self.title_image.scaledToWidth(15)
-        self.header.setPixmap(self.title_image)
+        #########################
+        ### PLAYER BOARD HERE ###
+        #########################
 
+        # adding widgets to the stack
+        self.stack.addWidget(self.title_screen)
+        self.stack.addWidget(self.score_screen)
+
+        # creating menu
+        self._create_menu()
+
+    def create_scoreScreen(self):
         # score screen picture
         self.score_header = QLabel()
         self.screen_image = QPixmap(':/images/score_board2.jpg')
         self.screen_image.scaledToWidth(0)
         self.score_header.setPixmap(self.screen_image)
-        
-        # title screen widgets, layout and labels
-        self.title_screen = QWidget()
-        self.title_screen.setObjectName("title_screen")
-        self.title_screen_layout = QVBoxLayout()
-        self.title_screen.setLayout(self.title_screen_layout)
-        self.title_screen_layout.addWidget(self.header)
-        self.title_button = QPushButton('Create Score Board')
-        self.title_screen_layout.addWidget(self.title_button)
-        
-        # creating buttons
-        self.p1 = Player()
-        self.back_button = QPushButton('Back')
-        self.back_button.setObjectName('back_button')
 
         # score screen widgets, layout and labels
         self.score_screen = QWidget()
@@ -113,19 +110,35 @@ class ScoreTracker(QMainWindow):
         self.score_screen_layout.addWidget(self.score_header)
         self.score_label = QLabel()
         self.score_screen_layout.addWidget(self.score_label)
-        self.score_screen_layout.addWidget(self.p1.button_group)
+
+        # creating back button
+        self.back_button = QPushButton('Back')
+        self.back_button.setObjectName('back_button')
+
+        # back button
         self.score_screen_layout.addWidget(self.back_button)
         
+        # connection
+        self.back_button.clicked.connect(self.title_screen_onClick)
+
+    def create_titleScreen(self):
+        # title screen picture
+        self.header = QLabel()
+        self.title_image = QPixmap(':/images/score_board.jpg')
+        self.title_image.scaledToWidth(15)
+        self.header.setPixmap(self.title_image)
+
+        # title screen widgets, layout and labels
+        self.title_screen = QWidget()
+        self.title_screen.setObjectName("title_screen")
+        self.title_screen_layout = QVBoxLayout()
+        self.title_screen.setLayout(self.title_screen_layout)
+        self.title_screen_layout.addWidget(self.header)
+        self.title_button = QPushButton('Create Score Board')
+        self.title_screen_layout.addWidget(self.title_button)
+
         # button connections
         self.title_button.clicked.connect(self.score_screen_onClick)
-        self.back_button.clicked.connect(self.title_screen_onClick)
-        
-        # adding widgets to the stack
-        self.stack.addWidget(self.title_screen)
-        self.stack.addWidget(self.score_screen)
-
-        # creating menu
-        self._create_menu()
         
     # function to switch to the score page
     def score_screen_onClick(self):

@@ -11,6 +11,11 @@ QLabel{
     font-size: 22px;
 }
 
+QLabel#cbox_label{
+    font-size: 14px;
+}
+
+
 QPushButton{
     border: 2px solid #000000;
     border-radius: 3px;
@@ -27,5 +32,10 @@ QPushButton#back_button{
 QLineEdit{
     background: #556fc5;
     border: 0px;
+    font-size: 15px;
+}
+
+QComboBox{
+    background: #556fc5;
     font-size: 15px;
 }

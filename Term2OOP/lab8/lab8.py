@@ -5,7 +5,7 @@ import sys
 
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import (QPixmap, QFont, QIcon)
-from PyQt5.QtWidgets import (QApplication, QDialog, QGridLayout, QGroupBox, QHBoxLayout, QLabel, QLineEdit, QMainWindow,
+from PyQt5.QtWidgets import (QApplication, QComboBox, QDialog, QGridLayout, QGroupBox, QHBoxLayout, QLabel, QLineEdit, QMainWindow,
         QProgressBar, QPushButton, QToolBar, QStatusBar, QStackedWidget, QStyleFactory, QVBoxLayout, QWidget)
 
 class Player:
@@ -36,14 +36,14 @@ class Player:
         # removing border from group
         self.button_group.setStyleSheet('border: 0px;')
 
+        # connections
+        self.increase_button.clicked.connect(self.increase_score_onClick)
+        self.decrease_button.clicked.connect(self.decrease_score_onClick)
+
         # adding to layout
         self.button_layout.addWidget(self.decrease_button)
         self.button_layout.addWidget(self.score_display)
         self.button_layout.addWidget(self.increase_button)
-
-        # connections
-        self.increase_button.clicked.connect(self.increase_score_onClick)
-        self.decrease_button.clicked.connect(self.decrease_score_onClick)
 
         # setting layout
         self.button_group.setLayout(self.button_layout)
@@ -67,7 +67,6 @@ class ScoreTracker(QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setWindowTitle('ScoreKeeper 4.2')
-        self.setFixedSize(400, 450)
         
         # creating stacked widgets
         self.stack = QStackedWidget(self)
@@ -83,10 +82,6 @@ class ScoreTracker(QMainWindow):
         with open(styles, 'r') as f:
             # external stylesheet
             self.setStyleSheet(f.read())
-        
-        #########################
-        ### PLAYER BOARD HERE ###
-        #########################
 
         # adding widgets to the stack
         self.stack.addWidget(self.title_screen)
@@ -111,16 +106,7 @@ class ScoreTracker(QMainWindow):
         self.score_label = QLabel()
         self.score_screen_layout.addWidget(self.score_label)
 
-        # creating back button
-        self.back_button = QPushButton('Back')
-        self.back_button.setObjectName('back_button')
-
-        # back button
-        self.score_screen_layout.addWidget(self.back_button)
         
-        # connection
-        self.back_button.clicked.connect(self.title_screen_onClick)
-
     def create_titleScreen(self):
         # title screen picture
         self.header = QLabel()
@@ -128,23 +114,45 @@ class ScoreTracker(QMainWindow):
         self.title_image.scaledToWidth(15)
         self.header.setPixmap(self.title_image)
 
+        # combo box
+        self.player_no = QComboBox()
+        self.players = ['1','2','3','4']
+        self.player_no.addItems(self.players)
+        self.player_boxLabel = QLabel('Please select the number of players (1-4):')
+        self.player_boxLabel.setObjectName('cbox_label')
+        self.player_boxLabel.setBuddy(self.player_no)
+
         # title screen widgets, layout and labels
         self.title_screen = QWidget()
         self.title_screen.setObjectName("title_screen")
         self.title_screen_layout = QVBoxLayout()
         self.title_screen.setLayout(self.title_screen_layout)
         self.title_screen_layout.addWidget(self.header)
+        self.title_screen_layout.addWidget(self.player_boxLabel)
+        self.title_screen_layout.addWidget(self.player_no)
         self.title_button = QPushButton('Create Score Board')
         self.title_screen_layout.addWidget(self.title_button)
 
         # button connections
         self.title_button.clicked.connect(self.score_screen_onClick)
+        self.title_button.clicked.connect(self._create_players)
+    
+    def _create_players(self):
+        number_of_players = self.player_no.currentText()
+        self.holding_list = []
+
+        for i in range(int(number_of_players)):
+            self.holding_list.append(Player())
+            
+        for j in range(int(number_of_players)):
+            self.score_screen_layout.addWidget(self.holding_list[j].button_group)
         
+              
     # function to switch to the score page
     def score_screen_onClick(self):
         self.stack.setCurrentIndex(1)
     
-    # switch to title screen
+    #### FOR PREVIOUS BACK BUTTON, REMOVED UNTIL I FIGURE OUT LAYOUT ON SCORE SCREEN ####
     def title_screen_onClick(self):
         self.stack.setCurrentIndex(0)
     

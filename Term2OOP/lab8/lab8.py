@@ -92,6 +92,7 @@ class ScoreTracker(QMainWindow):
         self._create_tool_bar()
 
     def create_scoreScreen(self):
+        """ creates a score screen """
         # score screen picture
         self.score_header = QLabel()
         self.screen_image = QPixmap(':/images/score_board2.jpg')
@@ -109,6 +110,7 @@ class ScoreTracker(QMainWindow):
 
         
     def create_titleScreen(self):
+        """ creates title screen """
         # title screen picture
         self.header = QLabel()
         self.title_image = QPixmap(':/images/score_board.jpg')

@@ -159,8 +159,15 @@ class ScoreTracker(QMainWindow):
     def _remove_player(self):
         """ toolbar button to remove player from the scoreboard """
         if (len(self.holding_list) > 1):
-            self.holding_list.pop()
             self.holding_list[-1].button_group.setParent(None)
+            self.holding_list.pop()
+
+        # need to process an event to trigger minimumSizeHint
+        for k in range(0, 10):
+            QApplication.processEvents()
+        
+        self.resize(self.minimumSizeHint())
+   
             
         
 

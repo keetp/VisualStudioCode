@@ -87,8 +87,9 @@ class ScoreTracker(QMainWindow):
         self.stack.addWidget(self.title_screen)
         self.stack.addWidget(self.score_screen)
 
-        # creating menu
+        # creating menu+toolbar
         self._create_menu()
+        self._create_tool_bar()
 
     def create_scoreScreen(self):
         # score screen picture
@@ -138,6 +139,7 @@ class ScoreTracker(QMainWindow):
         self.title_button.clicked.connect(self._create_players)
     
     def _create_players(self):
+        """ making a list of players and adding them depending on combobox choice """
         number_of_players = self.player_no.currentText()
         self.holding_list = []
 
@@ -146,8 +148,22 @@ class ScoreTracker(QMainWindow):
             
         for j in range(int(number_of_players)):
             self.score_screen_layout.addWidget(self.holding_list[j].button_group)
+    
+    def _add_player(self):
+        """ toolbar button to add new player to the scoreboard """
+        self.new_player = Player()
+        self.holding_list.append(self.new_player)
+        # bit verbose, takes the most recent addition to the list and adds it to the layout
+        self.score_screen_layout.addWidget(self.holding_list[len(self.holding_list)-1].button_group)
+
+    def _remove_player(self):
+        """ toolbar button to remove player from the scoreboard """
+        if (len(self.holding_list) > 1):
+            self.holding_list.pop()
+            self.holding_list[-1].button_group.setParent(None)
+            
         
-              
+
     # function to switch to the score page
     def score_screen_onClick(self):
         self.stack.setCurrentIndex(1)
@@ -156,16 +172,22 @@ class ScoreTracker(QMainWindow):
     def title_screen_onClick(self):
         self.stack.setCurrentIndex(0)
     
+    def _create_tool_bar(self):
+        """ creating toolbar """
+        self.tools = QToolBar()
+        self.addToolBar(self.tools)
+        self.tools.addAction('&Add Player', self._add_player)
+        self.tools.addAction('&Remove Player', self._remove_player)
+    
     def _create_menu(self): 
         """ creating menu """
         self.menu = self.menuBar().addMenu('&Menu')
         self.help = self.menuBar().addMenu('&Help')
-        
         self.menu.addAction('&Exit', self.close)
         self.help.addAction('&About', self.display_about)
-
+        
     def display_about(self):
-        """ about section in the menu"""
+        """ about section in the menu """
         about = QDialog(self) 
         layout = QVBoxLayout()
         about_label = QLabel('Small ScoreKeeper app made in Python, \nshoutout to John Milley. \n\n\n\n\t\t CNA OOP Python 1890 ')

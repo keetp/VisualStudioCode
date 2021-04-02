@@ -170,9 +170,6 @@ class ScoreTracker(QMainWindow):
         
         self.resize(self.minimumSizeHint())
    
-            
-        
-
     # function to switch to the score page
     def score_screen_onClick(self):
         self.stack.setCurrentIndex(1)

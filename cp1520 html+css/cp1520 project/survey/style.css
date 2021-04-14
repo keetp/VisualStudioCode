@@ -114,12 +114,9 @@ input:hover {
   background-color: var(--hover-color);
 }
 
-input[type="radio"] {
-  width: 15px;
-  height: 15px;
-}
-
+input[type="radio"], 
 input[type="checkbox"] {
   width: 15px;
   height: 15px;
 }
+

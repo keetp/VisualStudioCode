@@ -1,0 +1,94 @@
+:root{
+    --survey-background: #141118;
+    --font-color: rgb(214, 209, 209);
+    --hover-color: rgb(85, 76, 92);
+}
+
+html{
+    height: 100%;
+    font-size: 25px;
+    max-width: 1000px;
+    margin: auto;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+.wrapper{
+    text-align:justify;
+    background-color: var(--survey-background);
+    border-radius: 10px;
+}
+
+
+#submit-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;  
+}
+
+#dropdown{
+    background-color: var(--font-color);
+    width: 50%;
+    height: 25px;
+    font-size: 20px;
+    color: grey;
+}
+
+#dropdown:focus{
+    background: var(--hover-color);
+    color: white;
+}
+
+#title{
+    color: var(--font-color);
+    text-align: center;
+    text-decoration: underline;
+}
+
+.survey-header{
+    text-align: justify;
+    color: var(--font-color);
+}
+
+.radio-option{
+    color: var(--font-color);
+}
+
+form{
+    margin-left: 15px;
+}
+
+body{
+    background: linear-gradient(45deg, #271755, #685c6d 30%);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+button{
+    height: 80px;
+    width: 280px;
+    border-radius: 5px;
+    background-color: var(--font-color);
+}
+
+input{
+    background-color: var(--font-color);
+    width: 50%;
+    height: 25px;
+    font-size: 20px;
+}
+
+input:hover{
+    background-color: var(--hover-color);
+}
+
+input[type="radio"]{
+    width: 15px;
+    height: 15px;
+    font-size: 14px;
+}
+
+

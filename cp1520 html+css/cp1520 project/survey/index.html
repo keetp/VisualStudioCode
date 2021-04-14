@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel='stylesheet'>
+    <title>Survey</title>
+</head>
+<body>
+    <h1 id="title">KEET'S SURVEY</h1>
+    <div class="wrapper">
+    <form id="survey-form">
+        <h2 class="survey-header" id="name-label">Name</h2>
+        <input id="name" type="text" placeholder="Enter your name" required>
+        <h2 class="survey-header" id='email-label'>Email</h2>
+        <input id="email" type="email" placeholder="Enter your email" required>
+        <h2 class="survey-header" id='age-label'>Age (optional)</h2>
+        <input id="number" type="number" placeholder="Enter your age" min=1 max=120>
+        <h2 class="survey-header">Dropdown Box</h2>
+        <select name="dropdown" id="dropdown" required>
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+            <option value="option4">Option 4</option>
+        </select>
+        <h2 class="survey-header">Sample radio buttons</h2>
+        <div id="radio-wrapper">
+            <div class="radio-option"><label><input id="option1" type="radio" value="option1" name="radio-get" checked>Option1</label></div>
+            <div class="radio-option"><label><input id="option2" type="radio" value="option2" name="radio-get">Option2</label></div>
+            <div class="radio-option"><label><input id="option3" type="radio" value="option3" name="radio-get">Option3</label></div>
+        </div>
+        <div id='submit-button'><button id='submit' type='submit'>Submit</button></div>
+    </form>
+    </div>
+    <!--JS SCRIPT FOR TESTING-->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>

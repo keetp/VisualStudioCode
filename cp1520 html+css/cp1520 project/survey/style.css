@@ -93,6 +93,12 @@ textarea{
     width:500px;
     height:250px;
     background-color: var(--font-color);
+    font-size: 20px;
+}
+
+textarea:hover{
+    background-color: var(--hover-color);
+    color: var(--font-color);
 }
 
 input {

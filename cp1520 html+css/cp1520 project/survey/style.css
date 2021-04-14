@@ -15,7 +15,6 @@ html {
   text-align: center;
   background-color: var(--survey-background);
   border-radius: 10px;
-  
 }
 
 #description {
@@ -48,11 +47,13 @@ html {
   text-decoration: underline;
 }
 
-#radio-wrapper, #checkbox-wrapper {
+#radio-wrapper,
+#checkbox-wrapper {
   padding-top: 15px;
 }
 
-.radio-option, .checkbox-option {
+.radio-option,
+.checkbox-option {
   color: var(--font-color);
   font-size: 12px;
 }
@@ -71,8 +72,9 @@ label {
   text-align: center;
 }
 
-label.radio-text, label.checkbox-text{
-    font-size: 22px;
+label.radio-text,
+label.checkbox-text {
+  font-size: 22px;
 }
 
 button {
@@ -86,19 +88,18 @@ button {
 span {
   display: block;
   padding-bottom: 10px;
-  
 }
 
-textarea{
-    width:500px;
-    height:250px;
-    background-color: var(--font-color);
-    font-size: 20px;
+textarea {
+  width: 500px;
+  height: 250px;
+  background-color: var(--font-color);
+  font-size: 20px;
 }
 
-textarea:hover{
-    background-color: var(--hover-color);
-    color: var(--font-color);
+textarea:hover {
+  background-color: var(--hover-color);
+  color: var(--font-color);
 }
 
 input {
@@ -114,11 +115,11 @@ input:hover {
 }
 
 input[type="radio"] {
-    width: 15px;
-    height: 15px;
+  width: 15px;
+  height: 15px;
 }
 
 input[type="checkbox"] {
-    width: 15px;
-    height: 15px;
+  width: 15px;
+  height: 15px;
 }

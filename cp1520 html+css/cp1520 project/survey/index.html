@@ -1,121 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./style.css" rel="stylesheet" />
     <title>Survey</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <h1 id="title">KEET'S SURVEY</h1>
     <p id="description">Short survey to test objectives outlined by FCC</p>
     <div class="wrapper">
-      <form id="survey-form">
-        <span><label id="name-label">Name</label></span>
-        <input
-          id="name"
-          type="text"
-          placeholder="Enter your name"
-          required
-        /><br />
-        <span><label id="email-label">Email</label></span>
-        <input
-          id="email"
-          type="email"
-          placeholder="Enter your email"
-          required
-        /><br />
-        <span><label id="number-label">Age (optional)</label></span>
-        <input
-          id="number"
-          type="number"
-          placeholder="Enter your age"
-          min="1"
-          max="120"
-        /><br />
-        <span><label id="dropdown-label">Dropdown Box</label></span>
-        <select name="dropdown" id="dropdown" required>
-          <option value="option1">Option 1</option>
-          <option value="option2">Option 2</option>
-          <option value="option3">Option 3</option>
-          <option value="option4">Option 4</option>
-        </select>
-        <div id="radio-wrapper">
-          <label id="radio-label">Sample radio buttons</label>
-          <div class="radio-option">
-            <label class="radio-text"
-              ><input
-                id="option1"
-                type="radio"
-                value="option1"
-                name="radio-get"
-                checked
-              />Option1</label
-            >
-          </div>
-          <div class="radio-option">
-            <label class="radio-text"
-              ><input
-                id="option2"
-                type="radio"
-                value="option2"
-                name="radio-get"
-              />Option2</label
-            >
-          </div>
-          <div class="radio-option">
-            <label class="radio-text"
-              ><input
-                id="option3"
-                type="radio"
-                value="option3"
-                name="radio-get"
-              />Option3</label
-            >
-          </div>
-        </div>
-        <div id="checkbox-wrapper">
-          <label id="checkbox-label">Sample checkboxes</label>
-          <div class="checkbox-option">
-            <label class="checkbox-text"
-              ><input
-                type="checkbox"
-                id="checkbox1"
-                name="checkbox1"
-                value="checkbox1"
-              />Checkbox 1</label
-            >
-          </div>
-          <div class="checkbox-option">
-            <label class="checkbox-text"
-              ><input
-                type="checkbox"
-                id="checkbox2"
-                name="checkbox2"
-                value="checkbox2"
-              />Checkbox 2</label
-            >
-          </div>
-          <div class="checkbox-option">
-            <label class="checkbox-text"
-              ><input
-                type="checkbox"
-                id="checkbox3"
-                name="checkbox3"
-                value="checkbox3"
-              />Checkbox 3</label
-            >
-          </div>
-        </div>
-        <span><label> Additional comments</label></span>
-        <textarea id="comments"></textarea>
-        <div id="submit-button">
-          <button id="submit" type="submit">Submit</button>
-        </div>
-      </form>
+        <form id="survey-form">
+            <span><label id="name-label">Name</label></span>
+            <input id="name" type="text" placeholder="Enter your name" required /><br />
+            <span><label id="email-label">Email</label></span>
+            <input id="email" type="email" placeholder="Enter your email" required /><br />
+            <span><label id="number-label">Age (optional)</label></span>
+            <input id="number" type="number" placeholder="Enter your age" min="1" max="120" /><br />
+            <span><label id="dropdown-label">Dropdown Box</label></span>
+            <select name="dropdown" id="dropdown" required>
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+                <option value="option4">Option 4</option>
+            </select>
+            <div id="radio-wrapper">
+                <label id="radio-label">Sample radio buttons</label>
+                <div class="radio-option">
+                    <label class="radio-text"><input id="option1" type="radio" value="option1" name="radio-get"
+                            checked />Option1</label>
+                </div>
+                <div class="radio-option">
+                    <label class="radio-text"><input id="option2" type="radio" value="option2"
+                            name="radio-get" />Option2</label>
+                </div>
+                <div class="radio-option">
+                    <label class="radio-text"><input id="option3" type="radio" value="option3"
+                            name="radio-get" />Option3</label>
+                </div>
+            </div>
+            <div id="checkbox-wrapper">
+                <label id="checkbox-label">Sample checkboxes</label>
+                <div class="checkbox-option">
+                    <label class="checkbox-text"><input type="checkbox" id="checkbox1" name="checkbox1"
+                            value="checkbox1" />Checkbox 1</label>
+                </div>
+                <div class="checkbox-option">
+                    <label class="checkbox-text"><input type="checkbox" id="checkbox2" name="checkbox2"
+                            value="checkbox2" />Checkbox 2</label>
+                </div>
+                <div class="checkbox-option">
+                    <label class="checkbox-text"><input type="checkbox" id="checkbox3" name="checkbox3"
+                            value="checkbox3" />Checkbox 3</label>
+                </div>
+            </div>
+            <span><label> Additional comments</label></span>
+            <textarea id="comments"></textarea>
+            <div id="submit-button">
+                <button id="submit" type="submit">Submit</button>
+            </div>
+        </form>
     </div>
     <!--JS SCRIPT FOR TESTING-->
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-  </body>
+</body>
+
 </html>

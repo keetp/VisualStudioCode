@@ -1,0 +1,37 @@
+:root{
+    --font-color: rgb(202, 198, 198);
+}
+
+a{  
+    color: var(--font-color);
+    font-size: 22px;
+}
+
+img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+p{
+    font-size: 16px;
+}
+
+body {
+    background: linear-gradient(45deg, #150d30, #3b2f41 30%);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+.card{
+    background-color: rgb(20, 20, 20);
+    color: var(--font-color);
+    border-radius: 10px;
+}
+
+.card-footer{
+    text-align: right;
+    margin-right: 6px;
+}
+

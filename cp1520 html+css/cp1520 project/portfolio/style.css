@@ -17,7 +17,7 @@ p{
 }
 
 body {
-    background: linear-gradient(45deg, #150d30, #3b2f41 30%);
+    background: linear-gradient(rgb(59, 59, 59), rgb(32, 19, 43), black);
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;

@@ -1,32 +1,33 @@
-:root{
+:root {
     --bg-color: rgb(169, 202, 207);
     --card-color: rgb(241, 221, 221);
     --font-color: rgb(13, 9, 53);
 }
 
-html{
+html {
     background-color: var(--bg-color);
     font-family: 'Open Sans', sans-serif;
 }
 
-.navbar{
+.navbar {
     display: flex;
     font-size: 20px;
     justify-content: space-around;
     margin-left: 70vw;
 }
 
-.container{
+.container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    flex-shrink:inherit;
     column-gap: 40px;
     justify-content: center;
     position: relative;
 }
 
-.carc-text{
-    width:15vw;
+.carc-text {
+    width: 15vw;
 }
 
 .carc, .gloom, .wingspan {
@@ -36,37 +37,70 @@ html{
     width: 400px;
     height: fit-content;
     padding-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-ul{
+.wrapper {
+    text-align: center;  
+}
+
+ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
-a{
+a {
     color: black;
     text-decoration: none;
 }
 
-img{
+img {
     width: 17vw;
     margin-left: 35px;
 }
 
-h1{
+h1 {
     text-align: center;
 }
 
-h4, p{
+h4, p {
     margin-left: 15px;
 }
 
-button{
+label{
+    font-size: 22px;
+}
+
+.cart-button{
     width: 15vw;
     height: 6vh;
     background-color: rgb(60, 60, 85);
     color: white;
     margin-left: 12%;
+    margin-top: 6px;
+}
+
+#submit{
+    background-color: white;
+    width: 25%;
+    height: 6vh;
+    font-size: 22px;
+}
+
+input {
+    width: 25%;
+    height: 25px;
+    font-size: 20px;
+    margin-bottom: 1.4rem;
+}
+
+  
+textarea {
+    width: 25%;
+    height: 250px;
+    font-size: 20px;
 }

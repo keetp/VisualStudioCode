@@ -1,15 +1,19 @@
-p{
-    font-size: 16px;
-}
-
 body {
     background: linear-gradient(rgb(59, 59, 59), rgb(21, 14, 27), black);
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
-  }
+}
 
-.btn-outline-secondary:hover{
+.btn-outline-secondary:hover {
     background-color: rgb(22, 22, 22);
+}
+
+.navbar-nav{
+    font-size: 18px;
+}
+
+section{
+    height: 100vh;
 }

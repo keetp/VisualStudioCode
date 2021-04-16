@@ -24,14 +24,12 @@ body {
     background-attachment: fixed;
   }
 
-.card{
-    background-color: rgb(20, 20, 20);
-    color: var(--font-color);
-    border-radius: 10px;
-}
 
 .card-footer{
     text-align: right;
     margin-right: 6px;
 }
 
+.top-buffer{
+    margin-top: 100px;
+}

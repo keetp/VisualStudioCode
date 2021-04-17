@@ -1,3 +1,7 @@
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
 body {
     background: linear-gradient(rgb(59, 59, 59), rgb(21, 14, 27), black);
     height: 100%;
@@ -16,4 +20,15 @@ body {
 
 section{
     height: 100vh;
+}
+
+h1#project-text{
+    margin: 44px; 
+    color: rgb(134, 134, 134);
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.card{
+    font-family: 'Montserrat', sans-serif;
 }

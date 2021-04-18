@@ -20,44 +20,47 @@
             <input id="email" type="email" placeholder="Enter your email" required /><br />
             <span><label id="number-label">Age (optional)</label></span>
             <input id="number" type="number" placeholder="Enter your age" min="1" max="120" /><br />
-            <span><label id="dropdown-label">Dropdown Box</label></span>
+            <span><label id="dropdown-label">What brings you here?</label></span>
             <select name="dropdown" id="dropdown" required>
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
-                <option value="option4">Option 4</option>
+                <option value="option1">I'm grading the project</option>
+                <option value="option2">I am a random onlooker</option>
+                <option value="option3">I have infiltrated your computer</option>
             </select>
             <div id="radio-wrapper">
-                <label id="radio-label">Sample radio buttons</label>
+                <label id="radio-label">Favourite season?</label>
                 <div class="radio-option">
                     <label class="radio-text"><input id="option1" type="radio" value="option1" name="radio-get"
-                            checked />Option1</label>
+                            checked />Spring</label>
                 </div>
                 <div class="radio-option">
                     <label class="radio-text"><input id="option2" type="radio" value="option2"
-                            name="radio-get" />Option2</label>
+                            name="radio-get" />Summer</label>
                 </div>
                 <div class="radio-option">
                     <label class="radio-text"><input id="option3" type="radio" value="option3"
-                            name="radio-get" />Option3</label>
+                            name="radio-get" />Winter (objectively wrong)</label>
+                </div>
+                <div class="radio-option">
+                    <label class="radio-text"><input id="option4" type="radio" value="option3"
+                            name="radio-get" />Fall</label>
                 </div>
             </div>
             <div id="checkbox-wrapper">
-                <label id="checkbox-label">Sample checkboxes</label>
+                <label id="checkbox-label">Check off physical features:</label>
                 <div class="checkbox-option">
                     <label class="checkbox-text"><input type="checkbox" id="checkbox1" name="checkbox1"
-                            value="checkbox1" />Checkbox 1</label>
+                            value="checkbox1" />Bald</label>
                 </div>
                 <div class="checkbox-option">
                     <label class="checkbox-text"><input type="checkbox" id="checkbox2" name="checkbox2"
-                            value="checkbox2" />Checkbox 2</label>
+                            value="checkbox2" />Bearded</label>
                 </div>
                 <div class="checkbox-option">
                     <label class="checkbox-text"><input type="checkbox" id="checkbox3" name="checkbox3"
-                            value="checkbox3" />Checkbox 3</label>
+                            value="checkbox3" />Beautiful</label>
                 </div>
             </div>
-            <span><label> Additional comments</label></span>
+            <span><label> Additional criticism</label></span>
             <textarea id="comments"></textarea>
             <div id="submit-button">
                 <button id="submit" type="submit">Submit</button>

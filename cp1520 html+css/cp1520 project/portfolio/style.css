@@ -39,14 +39,11 @@ h1#contacts-text{
     font-size: 30px;
     padding: 20px;
     text-decoration: none;
+    text-align: center;
 }
 
 .fa:hover{
     opacity: 20%;
-}
-
-.fa-reddit{
-    color:rgb(255, 166, 0);
 }
 
 #projects img{

@@ -9,10 +9,12 @@
     <title>Portfolio</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <!-- Icon Library for social media links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
-    
+
 
     <link href="./style.css" rel="stylesheet" />
 </head>
@@ -36,7 +38,7 @@
                             <a class="nav-link" href="#projects">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="#contacts">Contact</a>
                         </li>
                     </ul>
                     <span class="navbar-text"><button type="button" class="btn btn-dark btn-outline-secondary">
@@ -48,37 +50,85 @@
         <div class='container-fluid pt-5'>
             <!--About Me section-->
             <section class='pt-5' id='welcome-section'>
-                <div class="card mx-auto bg-secondary text-black border-dark border-4 rounded" style="max-width: 900px; margin-top: 10%;">
+                <div class="card mx-auto bg-secondary text-black border-dark border-4 rounded"
+                    style="max-width: 900px; margin-top: 10%;" id='my_card'>
                     <div class="row g-8">
-                      <div class="col-md-4">
-                        <img src="./pic_of_me.jpg" class='img-fluid' alt="" style='border:none;'>
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <h4 class="card-title">Hi, my name is Keith.</h4>
-                          <p class="card-text">I am currently a software development student, Mathematics graduate and musician living in Corner Brook, NL.</p>
+                        <div class="col-md-4">
+                            <img src="./pic_of_me.jpg" class='img-fluid' alt="" style='border:none; max-width: 16rem;'
+                                id='my_pic'>
                         </div>
-                      </div>
+                        <div class="col-lg-8">
+                            <div class="card-body">
+                                <h1 class="card-title">Hi, my name is Keith.</h1>
+                                <p class="card-text">I am currently a software development student, Mathematics
+                                    graduate and musician living in Corner Brook, NL.<br> My experience includes:
+                                <ul>
+                                    <li>Python GUI Development (PyQt5)</li>
+                                    <li>HTML+CSS Web Development</li>
+                                    <li>SQL Database Management (Python SQLite)</li>
+                                    <li>Computational Analysis/Algorithm Development in Mathematics</li>
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                  
+                </div>
+
             </section>
         </div>
         <div class='container-fluid'>
             <!--Projects section-->
             <section class='pt-5' id='projects'>
-                <h1 class='' id='project-text'>Projects</h1>
+                <h1 id='project-text'>Projects</h1>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class='col-lg-4 project-tile'>
+                            <!--column 1-->
+                            <img src="./clock_pic.png" class='img-fluid' alt="">
+                            <p class='text-center fs-3'><a href='./clock/index.html'
+                                    style="color: rgb(112, 112, 112);">JavaScript Clock</a></p>
+                        </div>
+                        <div class='col-lg-4'>
+                            <!--column 2-->
+                            <img src="./stopwatch_pic.png" class='img-fluid align-self-center' alt=""
+                                style='min-width: 17rem'>
+                            <p class='text-center fs-3'><a href='./stopwatch/index.html'
+                                    style="color: rgb(112, 112, 112);">JavaScript Stopwatch</a></p>
+                        </div>
+                        <div class="col-lg-4">
+                            <!--column 3-->
+                            <img src="./python_logo.png" class='img-fluid' alt=""
+                                style='max-height: 318px; max-width: 318px;'>
+                            <p class='text-center fs-3'><a
+                                    href='https://github.com/keetp/python_projects/blob/main/hangman_game.py'
+                                    style="color: rgb(112, 112, 112);">Python Hangman Game</a></p>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
 
+        <div class='container-fluid'>
+            <!--Contact section-->
+            <!--No actual social media links-->
+            <section class='pt-5' id='contacts' style='text-align: center'>
+                <h1 id='contacts-text'>Contacts</h1>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter" style='color:lightblue'></a>
+                <a href="#" class="fa fa-instagram" style='color: rgb(32, 32, 145)'></a>
+                <a href="#" class="fa fa-reddit" style='color: orange'></a>
 
-        <!-- jQuery + BS5 script -->
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-            integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous">
-            </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
-            integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous">
-            </script>
+                <!-- jQuery + BS5 script -->
+                <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+                    integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+                    crossorigin="anonymous">
+                    </script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+                    integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+                    crossorigin="anonymous">
+                    </script>
+                <!-- FCC JS checkbox -->
+                <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script>
     </body>
 </div>
 

@@ -3,7 +3,7 @@ html{
 }
 
 body {
-    background: linear-gradient(rgb(59, 59, 59), rgb(21, 14, 27), black);
+    background: linear-gradient(40deg, black, rgb(36, 36, 36));
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
@@ -22,7 +22,8 @@ section{
     height: 100vh;
 }
 
-h1#project-text{
+h1#project-text,
+h1#contacts-text{
     margin: 44px; 
     color: rgb(134, 134, 134);
     font-family: 'Montserrat', sans-serif;
@@ -31,4 +32,37 @@ h1#project-text{
 
 .card{
     font-family: 'Montserrat', sans-serif;
+}
+
+.fa{
+    width: 50px;
+    font-size: 30px;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.fa:hover{
+    opacity: 20%;
+}
+
+.fa-reddit{
+    color:rgb(255, 166, 0);
+}
+
+#projects img{
+    margin: auto;
+    display: block;
+    width: 600px;
+    height: auto;
+}
+
+@media (max-width: 992px){
+    #my_card{
+        width: 16.5rem;
+        text-align: center;
+    }
+
+    #projects{
+        margin-top: 200px;
+    }
 }
